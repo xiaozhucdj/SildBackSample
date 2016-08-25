@@ -7,16 +7,16 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.github.xiaozhucdj.sildbacklibrary.MatchViewPager;
-import com.github.xiaozhucdj.sildbacklibrary.NanLuoBaseActivity;
+import com.github.xiaozhucdj.sildbacklibrary.SildBaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ThreeActivity extends NanLuoBaseActivity {
+public class ThreeActivity extends SildBaseActivity {
 
 
     @Override
-    public int getContentViewId() {
+    public int setContentViewId() {
         // TODO Auto-generated method stub
         return R.layout.activity_three;
     }
@@ -37,6 +37,7 @@ public class ThreeActivity extends NanLuoBaseActivity {
             testtextview.setText("viewpager：" + i);
             list.add(view);
         }
+        //这里我们简单完成一下viewpager功能
         viewPager.setAdapter(new ViewPagerAdapter(list));
     }
 

@@ -4,9 +4,9 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
-import com.github.xiaozhucdj.sildbacklibrary.NanLuoBaseActivity;
+import com.github.xiaozhucdj.sildbacklibrary.SildBaseActivity;
 
-public class SecondActivity extends NanLuoBaseActivity {
+public class SecondActivity extends SildBaseActivity {
 
     /*@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +15,7 @@ public class SecondActivity extends NanLuoBaseActivity {
     }*/
 
     @Override
-    public int getContentViewId() {
+    public int setContentViewId() {
         // TODO Auto-generated method stub
         return R.layout.activity_main;
     }

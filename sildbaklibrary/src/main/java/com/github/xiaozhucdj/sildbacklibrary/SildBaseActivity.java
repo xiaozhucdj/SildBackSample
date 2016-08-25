@@ -17,7 +17,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 
-public abstract class NanLuoBaseActivity extends AppCompatActivity {
+public abstract class SildBaseActivity extends AppCompatActivity {
 
 
     //关闭当前页面
@@ -55,7 +55,7 @@ public abstract class NanLuoBaseActivity extends AppCompatActivity {
         setContentView(R.layout.base);
         localViewPager = (ViewPager) findViewById(R.id.view_switch);
 
-        View contentView =  LayoutInflater.from(this).inflate(getContentViewId(), null);
+        View contentView =  LayoutInflater.from(this).inflate(setContentViewId(), null);
 
 
         initFramwork(this, contentView);
@@ -67,12 +67,9 @@ public abstract class NanLuoBaseActivity extends AppCompatActivity {
     /**
      * @return 返回当前页面展示的view布局id
      */
-    public abstract int getContentViewId();
+    public abstract int setContentViewId();
     public abstract void initView(View contentView);
 
-    protected void setContentBackgroundById(int id){
-
-    }
 
     /**
      * 实例化viewpager两页滑动框架
@@ -94,7 +91,7 @@ public abstract class NanLuoBaseActivity extends AppCompatActivity {
         }
 
         views.add(contentView);
-        NanLuoBaseAdapter localNanLuoBaseAdapter = new NanLuoBaseAdapter(views);
+        SildBaseAdapter localNanLuoBaseAdapter = new SildBaseAdapter(views);
         localViewPager.setAdapter(localNanLuoBaseAdapter);
 
 //        localViewPager.setPageTransformer(true, new ZoomOutPageTransformer());
@@ -161,10 +158,10 @@ public abstract class NanLuoBaseActivity extends AppCompatActivity {
         pageOut();
     }
 
-    class NanLuoBaseAdapter extends PagerAdapter {
+    class SildBaseAdapter extends PagerAdapter {
         private ArrayList<View> viewList;
 
-        public NanLuoBaseAdapter(ArrayList<View> paramArrayList) {
+        public SildBaseAdapter(ArrayList<View> paramArrayList) {
             this.viewList = paramArrayList;
         }
 

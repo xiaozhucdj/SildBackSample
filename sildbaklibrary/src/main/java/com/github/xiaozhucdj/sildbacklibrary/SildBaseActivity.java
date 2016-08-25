@@ -68,6 +68,11 @@ public abstract class SildBaseActivity extends AppCompatActivity {
      * @return 返回当前页面展示的view布局id
      */
     public abstract int setContentViewId();
+
+    /**
+     * 初始化view，可以butterknif结合使用
+     * @param contentView
+     */
     public abstract void initView(View contentView);
 
 
@@ -91,8 +96,8 @@ public abstract class SildBaseActivity extends AppCompatActivity {
         }
 
         views.add(contentView);
-        SildBaseAdapter localNanLuoBaseAdapter = new SildBaseAdapter(views);
-        localViewPager.setAdapter(localNanLuoBaseAdapter);
+        SildBaseAdapter localBaseAdapter = new SildBaseAdapter(views);
+        localViewPager.setAdapter(localBaseAdapter);
 
 //        localViewPager.setPageTransformer(true, new ZoomOutPageTransformer());
         Message localMessage = Message.obtain();
